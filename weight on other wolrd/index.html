@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculate the weight of an object on a planet</h1>
+        <div class="input-group">
+            <input type="number" id="mass" placeholder="Mass in Kilogram">
+            <select id="planet" onchange="updateImage()">
+                <option value="">--select planet--</option>
+                <option value="9.81" data-image="earth.png">Earth</option>
+                <option value="3.71" data-image="mars.png">Mars</option>
+                <option value="1.62" data-image="moon.png">Moon</option>
+                <option value="24.79" data-image="jupiter.png">Jupiter</option>
+
+            </select>
+            <button onclick="calculateWeight()">Calculate weight</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <img id="planet-image" src="earth.png" class="planet-image" alt="Planet">
+    <script src="script.js"></script>
+</body>
+</html>
